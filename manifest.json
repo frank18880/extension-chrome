@@ -1,0 +1,23 @@
+  {
+    "manifest_version": 3,
+    "name": "Facebook Font Changer",
+    "version": "1.0",
+    "description": "Changer font-family && add Link font.google Facebook",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.facebook.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "icons": {
+      "128": "/images/font.png"
+    }
+  }
